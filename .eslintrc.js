@@ -3,7 +3,11 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   parserOptions: { project: "./tsconfig.json" },
   env: { es2021: true, browser: true },
-  settings: { tailwindcss: { groupByResponsive: true } },
+  settings: {
+    react: { version: "detect" },
+    tailwindcss: { groupByResponsive: true },
+  },
+
   plugins: ["import", "react", "jsx-a11y", "simple-import-sort", "tailwindcss", "import-access"],
   extends: [
     "plugin:@typescript-eslint/recommended",
